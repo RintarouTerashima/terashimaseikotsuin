@@ -1,0 +1,329 @@
+
+html{
+    height: 100%;
+}    
+body {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  background-color:#F7F1ED;
+  margin: 0;
+  padding-top: 60px;
+  width:100%;
+  position: relative;
+  letter-spacing: 0.5px;
+}
+.paragraph{
+    width:100%;
+    letter-spacing: 0.5px;
+    line-height: 19px;
+    font-size: 17px;
+    padding-bottom: 8px;
+    font-weight: 400;
+    color:#190F0C;
+}
+/*アンダーライン*/
+.underline{
+    margin: 0 auto;
+    font-weight: bold;
+    border-bottom: 3px #eda93b solid;
+    width: fit-content;
+    font-size: large;
+} 
+/*リスト*/
+ul{
+    width: fit-content;
+    color:#190F0C;
+    font-size: 14px;
+  }
+  li{
+    color: #C17316;
+  }
+  span{
+    color: #190F0C;
+  }
+/*header*/
+header{
+  width:100%;
+  height:70px;
+  background-color: #eda93b;
+  position: fixed;
+  top:0;
+}
+
+.logotel{
+  display: flex;
+  justify-content: space-between;
+  width:95%;
+}
+
+.logo{
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 21px;
+    margin-left: 10px;
+    width: fit-content;
+}
+
+.tel{
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 21px;
+
+  width: fit-content;
+}
+
+.view{
+  width: 100%;
+}
+
+.view img{
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+  height:600px;
+}
+
+
+
+.bar{
+    z-index: 100;
+    background-color: #eda93b;
+}
+
+/*menu*/
+.menu{
+    height: 20px;/*menubar size*/
+    width: 30px;/*menubar size*/
+    position: fixed;/*menubar position*/
+    right: 20px;/*menubar position*/
+    top: 25px;/*menubar position*/
+    z-index: 99;/*menubar 一番手前側に配置*/
+    cursor: pointer;/*カーソルを指の形に変更*/
+}
+.menu__line{
+    background: #ffffff;/*bar color*/
+    display: block;/*https://saruwakakun.com/html-css/basic/display*/
+    height: 2px;/*bar thickness*/
+    position: absolute;/*絶対位置*/
+    width: 100%;/*棒の長さ*/
+    transition-duration: .1s;
+}
+.menu__line--center{
+    top: 9px;/*棒の位置*/
+        transition-duration: .1s;
+}
+.menu__line--bottom{
+    bottom: 0;/*下の棒の位置*/
+        transition-duration: .1s;
+}
+.menu__line--top.active{
+    top: 8px;
+    transform: rotate(45deg);/*上の棒の挙動*/
+    background-color: #ffffff;
+}
+.menu__line--center.active{
+    transform:scaleX(0);/*真ん中の棒の挙動*/
+}
+.menu__line--bottom.active{
+    bottom: 10px;
+    transform: rotate(135deg);/*下の棒の挙動*/
+    background-color: #ffffff;
+}
+.bar.active{
+    background-color: #eda93b;
+}
+/*gnav*/
+/*箱*/
+
+.gnav{
+    background: #eda93b;
+    margin-top: 60px;
+    height:100%;
+    display:none;
+    width: 100%;
+    z-index: 98;
+    position: fixed;
+}
+.gnav__wrap{
+    align-items:center;
+    text-align: center;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    line-height: 0.5;
+}
+
+.gnav__menu{
+    width:100%;
+    position: absolute;
+    left:50%;
+    top:2px;
+    height:90%;
+    margin-bottom:30;
+    overflow:auto;
+    transform:translateX(-50%);
+    list-style: none;
+    padding: 0;
+}
+
+.gnav__menu::-webkit-scrollbar{
+  width: 10px;
+ }
+ .gnav__menu::-webkit-scrollbar-track{
+  background-color: #ffffff;
+ }
+ .gnav__menu::-webkit-scrollbar-thumb{
+  background-color: #ffffff;
+ }
+
+.gnav__menu__item{
+    text-align: center;
+    margin-bottom: 70px;
+    
+}
+.gnav__menu__item a{
+      color: #ffffff;
+    font-size: 1.3em;
+    font-weight: bold;
+      text-decoration: none;
+    transition:.5s;/*黒く変わるまで*/
+}
+.gnav__menu__item a:hover{
+    color: #fff
+}
+
+
+@media print, screen and (max-width:1200px){
+  header{
+    width:100%;
+    height:60px;
+    background-color: #eda93b;
+    position: fixed;
+    top:0;
+    }
+    .logo{
+      padding-top: 5px;
+  }
+  .bar{
+      z-index: 100;
+  }
+
+    table {
+      border: 0;
+      width:100%
+    }
+    table th{
+      background-color: #C17316;
+      display: block;
+      border-right: none;
+    }
+    table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    table tr {
+      display: block;
+      margin-bottom: .625em;
+    }
+    table td {
+      border-bottom: 1px solid #bbb;
+      display: block;
+      font-size: 1.5em;
+      text-align: right;
+      position: relative;
+      padding: .625em .625em .625em 4em;
+      border-right: none;
+    }
+
+    .text{
+      font-size: 1.5em;
+    }
+    
+    table td::before {
+      content: attr(data-label);
+      font-weight: bold;
+      position: absolute;
+      left: 10px;
+      color: #C17316;
+    }
+    table td:last-child {
+      border-bottom: 0;
+    }
+    table tbody th {
+      color: #fff;
+  }
+
+
+
+  .underline{
+    margin: 0 auto;
+    font-weight: bold;
+    border-bottom: 3px #eda93b solid;
+    width: fit-content;
+    font-size:small;
+} 
+
+.paragraph{
+  font-size: 14px;
+}
+
+}
+/*hero*/
+.hero{
+  position: relative;
+}
+.herophoto{
+  width: 100%;
+}
+
+.hero p {
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+  font-size: 3.5vw;
+  font-weight: bold;
+  color: #C17316;
+}
+
+/*footer*/
+
+.footer{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #eda93b;
+    color:#ffffff;
+    width: 100%;
+}
+.footer a{
+    color:#ffffff;
+    text-decoration: none;
+}
+.f_content{
+    display: flex;
+    flex-direction: column;
+    padding-left: 3rem;
+    text-align: center;
+    
+}
+.name{
+    border-right: #ffffff solid 3px;
+    height: 20%;
+    padding-right: 3rem;
+    text-align: center;
+}
+.tera{
+    font: bold 24px "Zen Kaku Gothic New", sans-serif;
+    color: #ffffff;
+  }
