@@ -483,6 +483,45 @@ a.btn_03:hover {
   width: 100%;
 }
 
+li{
+  font-weight: 600;
+}
+
+a.btn_23 {
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	width: 120px;
+	margin: auto;
+	padding: 1rem 4rem;
+	font-weight: bold;
+	border: 2px solid #eda93b;
+	color: #eda93b;
+	cursor: pointer;
+	position: relative;
+ 	overflow: hidden;
+ 	z-index: 1;
+}
+a.btn_23::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color:#C17316;
+	transform: translateX(-100%);
+	transition: all .3s;
+	z-index: -1;
+}
+a.btn_23:hover::before {
+	transform: translateX(0);
+}
+a.btn_23:hover {
+	color: #fff;
+}
+
 @media screen and (max-width: 1024px) {
 
   .hero p{
