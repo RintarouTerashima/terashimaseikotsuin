@@ -6,6 +6,7 @@
      <link rel="stylesheet" href="../statics/style.css">
      <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script type="text/javascript" src="../statics/index.js"></script>
@@ -17,23 +18,27 @@
         <span class="menu__line menu__line--top"></span>
         <span class="menu__line menu__line--center"></span>
         <span class="menu__line menu__line--bottom"></span>
-  </div>
+    </div>
     <nav class="gnav">
         <div class="gnav__wrap">
             <ul class="gnav__menu">
               <li class="gnav__menu__item"><a href="../index.html">Top</a></li>
-              <li class="gnav__menu__item"><a href="../pages/access.html">アクセス</a></li>
-              <li class="gnav__menu__item"><a href="../pages/hospital.html">院内紹介</a></li>
-              <li class="gnav__menu__item"><a href="../pages/accident.html">交通事故治療について</a></li>
-              <li class="gnav__menu__item"><a href="../pages/heal.html">その他治療について</a></li>
-              <li class="gnav__menu__item"><a href="../pages/ziritsu.html">自律神経の乱れ</a></li>
-              <li class="gnav__menu__item"><a href="../pages/fee.html">料金について</a></li>
+              <li class="gnav__menu__item"><a href="access.html">アクセス</a></li>
+              <li class="gnav__menu__item"><a href="hospital.html">院内紹介</a></li>
+              <li class="gnav__menu__item"><a href="accident.html">交通事故治療について</a></li>
+              <li class="gnav__menu__item"><a href="ziritsu.html">自律神経の乱れ</a></li>
+              <li class="gnav__menu__item"><a href="fee.html">料金について</a></li>
             </ul>
         </div>
     </nav>
+    <div class="logotel">
         <div class="logo">
             <p>てらしま整骨院</p>
-            </div>
+        </div>
+        <div class="tel">
+            <p>TEL 03-3926-1235</p>
+        </div>
+    </div>
 </header>
     <div class="hero">
         <img  class="herophoto" src="../image/hero.png">
@@ -78,7 +83,7 @@
 により、費用が多少前後致します事を御了承下さい。
 診察の際にご説明させて頂きます。<br>
 また最終末院日から1ヶ月を過ぎてしまいますと、再度初診料が発生してしまいます。
-保上の一か月とは例えば4/10に来して、次に来院したのが5/10ではダメで、5/9ならOKということです。ご注意してください。
+保険上の一か月とは例えば4/10に来して、次に来院したのが5/10ではダメで、5/9ならOKということです。ご注意してください。
       </p>
     </div>
 
@@ -115,39 +120,39 @@
         <tbody>
             <tr>
                 <th rowspan="2">1割負担の方</th>
-                <td data-label="箇所" class="txt">シングル</td>
+                <td data-label="箇所" class="txt">1箇所</td>
                 <td colspan="2" data-label="初診料" class="txt">930円～</td>
                 <td colspan="2"  data-label="2回目以後" class="price">360円～</td>
             </tr>
 
             <tr>
-              <td data-label="箇所" class="txt">ダブル</td>
+              <td data-label="箇所" class="txt">2箇所</td>
               <td colspan="2"  data-label="初診料" class="txt">930円～</td>
               <td colspan="2" data-label="2回目以後" class="price">360円～</td>
           </tr>
 
           <tr>
             <th rowspan="2">2割負担の方</th>
-            <td data-label="箇所" class="txt">シングル</td>
+            <td data-label="箇所" class="txt">1箇所</td>
             <td colspan="2" data-label="初診料" class="txt">930円～</td>
             <td colspan="2"  data-label="2回目以後" class="price">360円～</td>
         </tr>
 
         <tr>
-          <td data-label="箇所" class="txt">ダブル</td>
+          <td data-label="箇所" class="txt">2箇所</td>
           <td colspan="2"  data-label="初診料" class="txt">930円～</td>
           <td colspan="2" data-label="2回目以後" class="price">360円～</td>
       </tr>
 
       <tr>
         <th rowspan="2">3割負担の方</th>
-        <td data-label="箇所" class="txt">シングル</td>
+        <td data-label="箇所" class="txt">1箇所</td>
         <td colspan="2" data-label="初診料" class="txt">930円～</td>
         <td colspan="2"  data-label="2回目以後" class="price">360円～</td>
     </tr>
 
     <tr>
-      <td data-label="箇所" class="txt">ダブル</td>
+      <td data-label="箇所" class="txt">2箇所</td>
       <td colspan="2"  data-label="初診料" class="txt">930円～</td>
       <td colspan="2" data-label="2回目以後" class="price">360円～</td>
   </tr>
@@ -246,54 +251,11 @@
           padding-right: 3rem;
         }
 
-        table {
-  border-collapse: collapse;
-  margin: 0 auto;
-  padding: 0;
-  width: 650px;
-  table-layout: fixed;
-  margin-top: 30px;
-}
+        .underline{
+          font-size: 20px;
+        }
 
-.graph .paragraph{
-  width:80%;
-  margin: 0 auto;
-  margin-top: 10px;
-}
 
-table tr {
-  background-color: #e6f2f5;
-  padding: .35em;
-  border-bottom: 2px solid #fff;
-}
-table th,
-table td {
-  padding: 1em 10px 1em 1em;
-  border-right: 2px solid #fff;
-}
-table th {
-  font-size: .85em;
-}
-table thead tr{
-  background-color: #C17316;
-  color:#fff;
-}
-table tbody th {
-    background: #eda93b;
-    color: #fff;
-}
-.txt{
-   text-align: right;
-
-}
-.price{
-  text-align: right;
-  color: #C17316;
-  font-weight: bold;
-}
-.non{
-  background:#fff
-}
 
     </style>
 </body>

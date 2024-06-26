@@ -19,7 +19,7 @@ body {
   line-height: 19px;
   font-size: 17px;
   padding-bottom: 8px;
-  font-weight: 400;
+  font-weight: 550;
   color: #190F0C;
 }
 
@@ -226,17 +226,24 @@ header {
 }
 
 .osu_circle {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   background: #eda93b;
   color: #ffffff;
   font-weight: bold;
   text-align: center;
-  line-height: 120px;
+  line-height: 140px;
+  font-size: 19px;
+  opacity: 0;
+  transform: translateY(20px);
 }
 
-/*挨拶*/
+.fadeInUp{
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+/* 挨拶 */
 .aisatu {
   background-color: #ffffff;
   width: 40%;
@@ -246,7 +253,11 @@ header {
   border-radius: 40px;
 }
 
-/*アイコンボタン*/
+.aisatu p{
+  font-weight:600;
+}
+
+/* アイコンボタン */
 .iconbtn {
   width: 100%;
 }
@@ -274,11 +285,11 @@ header {
 }
 
 .ear img {
-  filter: invert(72%) sepia(26%) saturate(6428%) hue-rotate(-7deg) brightness(106%) contrast(102%);
+  filter: invert(72%) sepia(33%) saturate(6428%) hue-rotate(-7deg) brightness(77%) contrast(102%);
 }
 
 .tameiki img {
-  filter: invert(72%) sepia(26%) saturate(6428%) hue-rotate(-7deg) brightness(80%) contrast(102%);
+  filter: invert(71%) sepia(33%) saturate(6428%) hue-rotate(-7deg) brightness(77%) contrast(100%);
 }
 
 /*NEWS*/
@@ -303,9 +314,11 @@ header {
   text-align: center;
 }
 
+
 .newscontainer a {
   color: #c17316;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .newscontainer a:hover {
@@ -346,12 +359,13 @@ header {
 
 .ouen {
   font-weight: bold;
-  font-size: 14px;
+  font-size: 18px;
   margin: 0 auto;
 }
 
 .ouentext {
   text-align: center;
+  font-weight: 600;
 }
 
 .ouentext a {
@@ -367,6 +381,10 @@ header {
 
 .top_ul {
   margin: auto;
+}
+
+.top_ul li{
+  font-weight: 600;
 }
 
 .accordion {
@@ -443,7 +461,7 @@ a.btn_03:hover {
   background: #c17316;
 }
 
-.hero{
+.hero {
   position: relative;
 }
 
@@ -467,6 +485,10 @@ a.btn_03:hover {
 
 @media screen and (max-width: 1024px) {
 
+  .hero p{
+    font-size: 4.5vw;
+  }
+
   header {
     width: 100%;
     height: 50px;
@@ -488,8 +510,12 @@ a.btn_03:hover {
     width: fit-content;
   }
 
-  .menu{
-    top:14px;
+  .paragraph{
+    font-size: 14px;
+  }
+
+  .menu {
+    top: 14px;
   }
   
   .tel {
@@ -499,20 +525,19 @@ a.btn_03:hover {
     width: fit-content;
   }
   
-
   .osu_img_container {
       width: 70px;
       height: 70px;
   }
 
   .osu_circle {
-      width: 80px;
-      height: 80px;
-      line-height: 80px;
-      font-size: 10px;
+      width: 90px;
+      height: 90px;
+      line-height: 90px;
+      font-size: 13px;
   }
 
-  .hero{
+  .hero {
     margin-top: -10px;
   }
 
@@ -520,14 +545,14 @@ a.btn_03:hover {
       height: auto;
       width: 100%;
       margin-top: -10px;    
-    }
+  }
 
   .aisatu {
-      width: 90%;
+      width: 94%;
       margin: 0 auto;
   }
 
-  .osusume{
+  .osusume {
     display: none;
   }
 
@@ -577,7 +602,6 @@ a.btn_03:hover {
       height: 100px;
   }
 
-
   .name {
       border-right: none;
       padding-right: 0px;
@@ -586,7 +610,7 @@ a.btn_03:hover {
 
   .name p {
     font-size: 14px;
-}
+  }
 }
 
 .footer {
@@ -604,7 +628,6 @@ a.btn_03:hover {
 .footer a {
   color: #ffffff;
   text-decoration: none;
-  
 }
 
 .f_content {
@@ -626,76 +649,133 @@ a.btn_03:hover {
   color: #ffffff;
 }
 
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  padding: 0;
+  width: 650px;
+  table-layout: fixed;
+  margin-top: 30px;
+}
 
+.graph .paragraph{
+  width:80%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
 
+table tr {
+  background-color: #e6f2f5;
+  padding: .35em;
+  border-bottom: 2px solid #fff;
+}
+table th,
+table td {
+  padding: 1em 10px 1em 1em;
+  border-right: 2px solid #fff;
+}
+table th {
+  font-size: .85em;
+}
+table thead tr{
+  background-color: #C17316;
+  color:#fff;
+}
+table tbody th {
+    background: #eda93b;
+    color: #fff;
+}
+.txt{
+   text-align: right;
 
+}
+.price{
+  text-align: right;
+  color: #C17316;
+  font-weight: bold;
+}
+.non{
+  background:#fff
+}
 
-
-@media print, screen and (max-width:1200px){
-
-    table {
-      border: 0;
-      width:100%
-    }
-    table th{
-      background-color: #C17316;
-      display: block;
-      border-right: none;
-    }
-    table thead {
-      border: none;
-      clip: rect(0 0 0 0);
-      height: 1px;
-      margin: -1px;
-      overflow: hidden;
-      padding: 0;
-      position: absolute;
-      width: 1px;
-    }
-    table tr {
-      display: block;
-      margin-bottom: .625em;
-    }
-    table td {
-      border-bottom: 1px solid #bbb;
-      display: block;
-      font-size: 1.5em;
-      text-align: right;
-      position: relative;
-      padding: .625em .625em .625em 4em;
-      border-right: none;
-    }
-
-    .text{
-      font-size: 1.5em;
-    }
-    
-    table td::before {
-      content: attr(data-label);
-      font-weight: bold;
-      position: absolute;
-      left: 10px;
-      color: #C17316;
-    }
-    table td:last-child {
-      border-bottom: 0;
-    }
-    table tbody th {
-      color: #fff;
+@media print, screen and (max-width: 1200px) {
+  table {
+    border: 0;
+    width: 90%;
   }
 
-  .logotel{
-   width: 80%;     
+  table th {
+    background-color: #C17316;
+    display: block;
+    border-right: none;
   }
 
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
 
+  table tr {
+    display: block;
+    margin-bottom: .625em;
+  }
 
-  .underline{
+  table td {
+    border-bottom: 1px solid #bbb;
+    display: block;
+    font-size: 1.5em;
+    text-align: right;
+    position: relative;
+    padding: .625em .625em .625em 4em;
+    border-right: none;
+  }
+
+  .text {
+    font-size: 1.5em;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    position: absolute;
+    left: 10px;
+    color: #C17316;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+
+  table tbody th {
+    color: #fff;
+  }
+
+  .logotel {
+    width: 80%;
+  }
+
+  .underline {
     margin: 0 auto;
     font-weight: bold;
     border-bottom: 3px #eda93b solid;
     width: fit-content;
-    font-size:small;
-} 
+    font-size: small;
+  }
+}
 
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
