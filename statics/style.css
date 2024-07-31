@@ -94,6 +94,13 @@ header {
   background-color: #eda93b;
 }
 
+.daygraph{
+  text-align: center;
+  margin:0 auto;
+}
+
+
+
 /*menu*/
 .menu {
   height: 20px;
@@ -547,6 +554,11 @@ a.btn_08:hover {
 	color: #fff;
 }
 
+.btn-flex{
+  display: flex;
+  margin-bottom: 50px;
+}
+
 @media screen and (max-width: 1024px) {
 
   .hero p{
@@ -675,6 +687,11 @@ a.btn_08:hover {
   .name p {
     font-size: 14px;
   }
+
+  .btn-flex{
+    display:block;
+  }
+
 }
 
 .footer {
